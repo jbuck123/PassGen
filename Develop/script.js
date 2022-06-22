@@ -8,6 +8,12 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var passwordLength =12;
+  var password =""
+  for (var i = 0; i <= passwordLength; i++) {
+    
+  }
 
   passwordText.value = password;
 
