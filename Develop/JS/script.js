@@ -14,6 +14,8 @@ var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 // 32 charaters btw
 var characters = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",",
 "-", ".", "/", "\\", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "_", "`", "{", "}", "|", "~"];
+var extra = []
+// extra array for the custom pass 
 
 function generatePassword() {
   passLength = prompt("Choose a password length between 8 and 128");
@@ -30,11 +32,21 @@ function generatePassword() {
     numerics = confirm("do you want numbers in your password?");
     specialCharacters = confirm("do you want special characters in your password?");
     lowercase = confirm("do you want to inlcude lowercase letters?");
-    uppercase = confrim("do you want to inclue uppercase letters?");
+    uppercase = confirm("do you want to inclue uppercase letters?");
   } 
 
-  console.log(uppercase, lowercase, specialCharacters, numerics);
-
+  // console.log(uppercase, lowercase, specialCharacters, numerics);
+  // checking to ensure that atleast one of the confirms was chosen
+  if (!numerics && !specialCharacters && !lowercase && !uppercase) {
+    var choices = alert("please select one of the options");
+  }
+  // if they answer yes to all the confirms 
+  else if (numerics && specialCharacters && lowercase && uppercase) {
+    extra = specialCharacters.concat(numbers, upper, lower);
+  }
+  else if (numerics && specialCharacters && uppercase) {
+    extra = characters.concat( numbers, upper)
+  }
 }
 
 
