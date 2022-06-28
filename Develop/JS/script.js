@@ -14,7 +14,9 @@ var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 // 32 charaters btw
 var characters = ["!", "\"", "#", "$", "%", "&", "\'", "(", ")", "*", "+", ",",
 "-", ".", "/", "\\", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "_", "`", "{", "}", "|", "~"];
-var choices
+var password = [];
+//empty array for the final password
+var choices;
 //in the else if statements 
 
 function generatePassword() {
@@ -103,7 +105,26 @@ function generatePassword() {
   else if (specialCharacters) {
     choices = characters;
   }
-  console.log(choices);
+
+
+
+// start randomly selecting based on the variables above. 
+
+
+for (var i = 0; i < passLength; i++) { 
+  var sample = choices[Math.floor(math.random() * choices.length)]; 
+  password.push(sample);
+}
+
+
+//this converts the password into a string and returns it.
+
+
+var passwordString = password.join("");
+return passwordString;
+
+
+ 
 } 
 
 
