@@ -126,41 +126,9 @@ return passwordString;
 
  
 } 
-
-
-// "if (upper + lower + numeric + spSymbols === 0) {
-//   alert('You must have at least one character type selected for your password!')
-// }"
-
-
-
-
-
-
-
-
-
-
-
-// passwordLength =Number(length); // this is how you check if pass length is between 8 - 128
-
-// generateBtn.addEventListener('click', promptUser);
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-
   passwordText.value = password;
-
 }
-
-// Add event listener to generate button
-// the listener we want to "listen" to is the generate button or the generate ID in the HTML
 generateBtn.addEventListener("click", writePassword);
-
-//listener example 
-
-// prompt example
-
